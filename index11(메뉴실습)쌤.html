@@ -69,6 +69,22 @@
 
     <script src="../js/jquery.js"></script>
 
+    <script>
+      $(document).ready(function(){
+        $(".gnb > .m").mouseenter(function(){
+         console.log(1)
+          $(event.currentTarget).addClass("on");
+          $(event.currentTarget).find(".menu").show();
+        })
+      
+      $(".gnb > .m").mouseleave(function(){
+        $(event.currentTarget).removeClass("on");
+        $(event.currentTarget).find(".menu").hide();
+      })
+
+      })
+
+    </script>
     
  
 
@@ -128,16 +144,7 @@
         
     </article>
 
-    <script>
-      $(".m").on("mouseenter",function(e){
-        $(e.target).closest(".m").addClass("on");
-        $(e.target).closest(".m").find(".menu").show();
-
-      }).on("mouseleave",function(e){
-        $(e.target).closest(".m").removeClass("on");
-        $(e.target).closest(".m").find(".menu").hide();
-      })
-    </script>
+    
 
 
 </body>
